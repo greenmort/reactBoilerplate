@@ -1,38 +1,43 @@
 {
-  "name": "bundlers",
-  "version": "1.0.0",
+  "name": "react-boilerplate",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "watch": "webpack --watch",
     "serve": "webpack-dev-server --content-base build/",
     "format": "prettier --write --single-quote --print-width=120 webpack.config.js \"src/**/*.{js,jsx}\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/greenmort/bundlers.git"
+    "url": "git@github.com:greenmort/reactBoilerplate.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Greenmort",
+  "license": "Apache License 2.0",
   "bugs": {
-    "url": "https://github.com/greenmort/bundlers/issues"
+    "url": "https://github.com/greenmort/reactBoilerplate/issues"
   },
-  "homepage": "https://github.com/greenmort/bundlers#readme",
+  "homepage": "https://greenmort.github.io/reactBoilerplate",
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "prop-types": "^15.6.0",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
-    "styled-components": "^2.2.3"
+    "redux": "^3.7.2",
+    "styled-components": "^2.2.4"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.7",
     "eslint": "^4.10.0",
@@ -45,6 +50,7 @@
     "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
+    "gh-pages": "^1.1.0",
     "image-webpack-loader": "^3.4.2",
     "node-sass": "^4.5.3",
     "prettier": "^1.8.2",
